@@ -35,12 +35,8 @@ get_header(); ?>
 
 				<article <?php post_class( 'post' ); ?>>
 					<?php
-						if( 'gallery' == get_post_format() ) :
-							get_template_part( 'format', 'gallery' );
-						elseif( 'status' == get_post_format() ) :
-							get_template_part( 'format', 'status' );
-						elseif( 'quote' == get_post_format() ) :
-							get_template_part( 'format', 'quote' );
+						if( in_array( get_post_format(), array( 'aside', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) ) ) :
+							get_template_part( 'format', get_post_format() );
 						else :
 							get_template_part( 'format', 'standard' );
 						endif;
@@ -57,7 +53,7 @@ get_header(); ?>
 							<li><span><?php _e( 'Comments', 'fixed' ); ?></span> <a href="<?php the_permalink(); ?>#comments-title"><?php comments_number( __( 'No Comments', 'fixed' ), __( '1 Comment', 'fixed' ), __( '% Comments', 'fixed' ) );?></a></li>
 						</ul><!-- .meta -->
 					<?php endif; ?>
-				</article><!-- .post-->
+				</article><!-- .post -->
 
 				<?php endwhile; ?>
 				<?php endif; ?>

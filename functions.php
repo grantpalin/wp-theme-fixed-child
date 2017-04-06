@@ -3,6 +3,10 @@ function fxdchld_setup() {
 	// add settings not included in parent theme
 	add_theme_support( "title-tag" );
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+
+	// override parent theme setting for post format support
+	// options: aside audio chat gallery image link quote status video
+	add_theme_support( 'post-formats', array( 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 }
 add_action( 'after_setup_theme', 'fxdchld_setup', 20 ); // should execute after parent theme setup; default is 10
 
