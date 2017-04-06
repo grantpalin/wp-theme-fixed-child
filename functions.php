@@ -14,3 +14,18 @@ function fxdchld_enqueue_styles() {
 	wp_enqueue_style( 'fixed-child-style', get_stylesheet_uri(), array( 'fixed-style' ) );
 }
 add_action( 'wp_enqueue_scripts', 'fxdchld_enqueue_styles' );
+
+function fxdchld_widgets() {
+	$args = array(
+		'id'            => 'home_widgets',
+		'name'          => __( 'Homepage Widgets', 'fxdchld' ),
+		'description'   => __( 'A container for widgets to appear on the homepage.', 'fxdchld' ),
+		'class'         => '',
+		'before_widget' => '<div id="%1$s" class="widget home-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>'
+	);
+	register_sidebar( $args );
+}
+add_action( 'widgets_init', 'fxdchld_widgets' );
