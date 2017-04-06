@@ -1,5 +1,8 @@
 <?php
 function fxdchld_setup() {
+	// add settings not included in parent theme
+	add_theme_support( "title-tag" );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 }
 add_action( 'after_setup_theme', 'fxdchld_setup', 20 ); // should execute after parent theme setup; default is 10
 
