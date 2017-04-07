@@ -11,7 +11,9 @@ get_header(); ?>
 
 		<div id="content">
 			<div class="posts">
-				<?php dynamic_sidebar( 'home_widgets' ); ?>
+				<div class="home-widget-container">
+					<?php dynamic_sidebar( 'home_widgets' ); ?>
+				</div>
 			</div><!-- .posts -->
 		</div><!-- .content -->
 

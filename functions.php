@@ -25,8 +25,8 @@ function fxdchld_widgets() {
 		'name'          => __( 'Homepage Widgets', 'fxdchld' ),
 		'description'   => __( 'A container for widgets to appear on the homepage.', 'fxdchld' ),
 		'class'         => '',
-		'before_widget' => '<div id="%1$s" class="widget home-widget %2$s">',
-		'after_widget'  => '</div>',
+		'before_widget' => '<div id="%1$s" class="widget home-widget %2$s"><div class="home-widget-inner">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>'
 	);
