@@ -12,6 +12,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /*
+ * Sidebar styling.
+ */
+
+/* override category link colors */
+.header .cat-item a {
+	color: #ffffff;
+}
+.header .cat-item a:hover {
+	color: #ffffff;
+}
+
+/*
  * Home page styling
  */
 
